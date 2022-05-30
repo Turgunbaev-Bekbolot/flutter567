@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lesson43_practice/bloc/user_bloc.dart';
 import 'package:lesson43_practice/models/models.dart';
 
 class MainInfo extends StatefulWidget {
@@ -14,15 +13,7 @@ class MainInfo extends StatefulWidget {
 }
 
 class _MainInfoState extends State<MainInfo> {
-  late UserBloc userBloc;
-
   @override
-  void initState() {
-    userBloc = UserBloc();
-    userBloc.add(GetUserEvent());
-    super.initState();
-  }
-
   Widget build(BuildContext context) {
     return Column(
       children: [
@@ -32,7 +23,7 @@ class _MainInfoState extends State<MainInfo> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Phone number:',
+                'Name:',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 16,
@@ -41,7 +32,7 @@ class _MainInfoState extends State<MainInfo> {
               ),
               Spacer(),
               Text(
-                widget.userModel.results.first.phone,
+                widget.userModel.results.first.name.title,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 14,
@@ -57,7 +48,7 @@ class _MainInfoState extends State<MainInfo> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Location:',
+                'First name:',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 16,
@@ -66,7 +57,7 @@ class _MainInfoState extends State<MainInfo> {
               ),
               Spacer(),
               Text(
-                widget.userModel.results.first.location.country,
+                widget.userModel.results.first.name.first,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 14,
@@ -82,7 +73,7 @@ class _MainInfoState extends State<MainInfo> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'City:',
+                'Last name:',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 16,
@@ -91,7 +82,7 @@ class _MainInfoState extends State<MainInfo> {
               ),
               Spacer(),
               Text(
-                widget.userModel.results.first.location.city,
+                widget.userModel.results.first.name.last,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 14,
@@ -107,7 +98,7 @@ class _MainInfoState extends State<MainInfo> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Email:',
+                'Gender:',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 16,
@@ -116,7 +107,32 @@ class _MainInfoState extends State<MainInfo> {
               ),
               Spacer(),
               Text(
-                widget.userModel.results.first.email,
+                widget.userModel.results.first.gender,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Date of birth:',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Spacer(),
+              Text(
+                widget.userModel.results.first.registered.date.toString(),
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 14,

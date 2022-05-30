@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lesson43_practice/bloc/user_bloc.dart';
 import 'package:lesson43_practice/models/models.dart';
 
 class LocationInfo extends StatefulWidget {
@@ -14,15 +13,7 @@ class LocationInfo extends StatefulWidget {
 }
 
 class _LocationInfoState extends State<LocationInfo> {
-  late UserBloc userBloc;
-
   @override
-  void initState() {
-    userBloc = UserBloc();
-    userBloc.add(GetUserEvent());
-    super.initState();
-  }
-
   Widget build(BuildContext context) {
     return Column(
       children: [
