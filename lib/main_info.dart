@@ -15,11 +15,11 @@ class MainInfo extends StatefulWidget {
 class _MainInfoState extends State<MainInfo> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 25, right: 25, top: 20),
-          child: Row(
+    return Padding(
+      padding: const EdgeInsets.only(left: 25, right: 25, top: 20),
+      child: Column(
+        children: [
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -41,10 +41,7 @@ class _MainInfoState extends State<MainInfo> {
               ),
             ],
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -66,10 +63,7 @@ class _MainInfoState extends State<MainInfo> {
               ),
             ],
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -91,10 +85,7 @@ class _MainInfoState extends State<MainInfo> {
               ),
             ],
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -116,10 +107,7 @@ class _MainInfoState extends State<MainInfo> {
               ),
             ],
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -141,10 +129,7 @@ class _MainInfoState extends State<MainInfo> {
               ),
             ],
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -166,8 +151,8 @@ class _MainInfoState extends State<MainInfo> {
               ),
             ],
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
